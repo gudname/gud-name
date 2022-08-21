@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Za gui V1", "GrapeTheme")
+local Window = Library.CreateLib("Za gui V2", "BloodTheme")
 
 --MAIN
 local Main = Window:NewTab("Main")
@@ -10,10 +10,9 @@ MainSection:NewButton("Big Head", "zombies will now have bigger head", function(
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/xSyon/ZombieAttack/main/engine.lua'),true))()
 end)
 
-MainSection:NewButton("Admin", "Get Admin commands only for you", function()
+MainSection:NewButton("Infinity yield", "Enables Infinity yield", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-
 
 --LOCAL PLAYER
 local Player = Window:NewTab("Player")
@@ -23,10 +22,11 @@ PlayerSection:NewSlider("Walkspeed", "Changes walkspeed", 500, 16, function(s) -
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-PlayerSection:NewSlider("Jumpower", "Changes jumpower", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+PlayerSection:NewSlider("Jumpower", "not working!", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-PlayerSection:NewKeybind("E", "E", Enum.KeyCode.F, function()
+PlayerSection:NewKeybind("Keybind", "if you press that button gui disaper", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
+
